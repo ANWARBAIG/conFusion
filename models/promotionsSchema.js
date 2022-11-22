@@ -18,19 +18,21 @@ var promotionSchema=new Schema({
     },
     price:{
         type:Currency
+    }
+    ,featured:{
+        type:Boolean,
+        required:true
     },
     description:{
         type:String,
         required:true
-    },
-    featured:{
-        type:Boolean,
-        required:true
     }
+
 },{
     timestamps:true
 },{
     id:false
 });
+
 var Promotions=mongoose.model('promotion',promotionSchema);
 module.exports=Promotions;
